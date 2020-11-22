@@ -29,18 +29,18 @@ app.post('/register',(req,res)=>{
     
     let no_telp=req.body.no_telp
     conn.query(`INSERT INTO tbl_user (no_telp) VALUES ('${no_telp}')`,(err,result)=>{
-        let result={}
+        let response={}
         if(err){
             switch(err.code){
                 case "ER_DUP_ENTRY":
-                    result={
+                    response={
                         status:false,
                         code:err.code,
                         message:'Registrasi Gagal ,Nomer Sudah Terdaftar!!!'
                     }
-                    break
+                    break;
                 default:
-                    result={
+                    response={
                         status:false,
                         code:err.code,
                         message:'Gagal Registrasi'
@@ -48,14 +48,14 @@ app.post('/register',(req,res)=>{
             }
             res.json(err)
         }else{
-            result={
+            response={
                 status:true,
                 code:res.code,
                 message:'Berhasil Registrasi'
             }
         }
 
-        res.json(result)
+        res.json(response)
     })
 })
 
