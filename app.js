@@ -13,7 +13,7 @@ app.get('/',(req,res)=>{
     //     }
     // })
 
-    res.send('Halloo')
+    res.send('Halloo Ari Ganteng')
 })
 
 app.listen()
