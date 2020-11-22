@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/svnvbkdl/wsdanakurootfolder/
+    - export DEPLOYPATH=/home/svnvbkdl/wsdanakurootfolder
     - /bin/cp -R * $DEPLOYPATH
