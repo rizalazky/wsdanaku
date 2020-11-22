@@ -5,7 +5,9 @@ const conn=require('./configmysql')
 const cors=require('cors')
 const bodyParser=require('body-parser')
 // corrs
-app.use(cors())
+app.use(cors({
+    allowedHeaders:'*'
+}))
 
 // body parser
 app.use(bodyParser.json())
@@ -38,6 +40,8 @@ app.post('/register',(req,res)=>{
     })
 })
 
-app.listen(port,()=>{
-    console.log('Runn on'+port)
-})
+// app.listen(port,()=>{
+//     console.log('Runn on'+port)
+// })
+
+app.listen()//for server

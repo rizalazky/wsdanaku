@@ -12,10 +12,11 @@
         const btn=document.getElementById('btn')
 
         btn.addEventListener('click',()=>{
-            fetch('http://localhost:3000/register',{
+            fetch('http://wsdanaku.com.pemalicomal.com/register',{
                 method:'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    // 'Access-Control-Allow-Origin:':'*'
                 // 'Content-Type': 'application/x-www-form-urlencoded',
                 },
                 body:JSON.stringify({
