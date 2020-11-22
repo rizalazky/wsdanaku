@@ -8,14 +8,14 @@ var connection = mysql.createConnection({
   database: 'db_danaku'
 })
 
-connection.connect((err)=>{
-    if(err){
-        throw err;
+// connection.connect((err)=>{
+//     if(err){
+//         throw err;
         
-    }else{
-        console.log('Koneksi DB Berhasil')
-    }
-})
+//     }else{
+//         console.log('Koneksi DB Berhasil')
+//     }
+// })
 
 
 module.exports=connection
