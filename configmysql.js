@@ -2,10 +2,10 @@ var mysql = require('mysql')
 
 
 var connection = mysql.createConnection({
-  host: 'localhost:3306',
+  host: 'localhost',
   user: 'svnvbkdl_pemalicomal2019',
   password: 'pemalicomal',
-  database: 'svnvbkdl_dbapemasi'
+  database: 'svnvbkdl_db_danaku'
 })
 
 // $server   = "localhost:3306";
