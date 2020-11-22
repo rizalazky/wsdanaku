@@ -16,6 +16,4 @@ app.get('/',(req,res)=>{
     res.send('Halloo')
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
+app.listen()
