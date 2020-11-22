@@ -31,22 +31,11 @@ app.post('/register',(req,res)=>{
     conn.query(`INSERT INTO tbl_user (no_telp) VALUES ('${no_telp}')`,(err,result)=>{
         let response={}
         if(err){
-            switch(err.code){
-                case "ER_DUP_ENTRY":
-                    response={
-                        status:false,
-                        code:err.code,
-                        message:'Registrasi Gagal ,Nomer Sudah Terdaftar!!!'
-                    }
-                    break;
-                default:
-                    response={
-                        status:false,
-                        code:err.code,
-                        message:'Gagal Registrasi'
-                    }
+            result={
+                status:false,
+                code:err.code,
+                message:'registrasi gagal,terjadi kesalahan'
             }
-            res.json(err)
         }else{
             response={
                 status:true,
@@ -54,7 +43,6 @@ app.post('/register',(req,res)=>{
                 message:'Berhasil Registrasi'
             }
         }
-
         res.json(response)
     })
 })
