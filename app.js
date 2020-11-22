@@ -29,12 +29,14 @@ app.post('/register',(req,res)=>{
     
     let no_telp=req.body.no_telp
     conn.query(`INSERT INTO tbl_user (no_telp) VALUES ('${no_telp}')`,(err,result)=>{
-        if(err) throw err
-
-        res.json({
-            'status':'200',
-            'message':'Berhasil Update Data'
-        })
+        if(err){
+            res.json(err)
+        }else{
+            res.json({
+                'status':'200',
+                'message':'Berhasil Update Data'
+            })
+        }
     })
 })
 
