@@ -6,7 +6,8 @@ const cors=require('cors')
 const bodyParser=require('body-parser')
 // corrs
 app.use(cors({
-    allowedHeaders:'*'
+    allowedHeaders:'*',
+    origin:'*'
 }))
 
 // body parser
