@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/svnvbkdl/wsdanakurootfolder
-    - /bin/cp -R images $DEPLOYPATH
+    - /bin/cp -R wsdanaku $DEPLOYPATH
