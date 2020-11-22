@@ -5,10 +5,7 @@ const conn=require('./configmysql')
 const cors=require('cors')
 const bodyParser=require('body-parser')
 // corrs
-app.use(cors({
-    allowedHeaders:'*',
-    origin:'*'
-}))
+app.use(cors())
 
 // body parser
 app.use(bodyParser.json())
