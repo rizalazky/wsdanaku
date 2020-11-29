@@ -52,6 +52,22 @@ app.post('/register',(req,res)=>{
     })
 })
 
+app.post('transfer',(req,res)=>{
+    let ke=req.body.to
+    let dari=req.body.from
+    let nominal=req.body.nominal
+
+    let query=`CALL SP_TRANSFER (@${ke},@${dari},@${nominal})`
+
+    conn.query(query,(err,result)=>{
+        if(err){
+            res.json(err)
+        }else{
+            res.json(result)
+        }
+    })
+})
+
 // app.listen(port,()=>{
 //     console.log('Runn on'+port)
 // })
