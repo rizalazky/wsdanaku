@@ -52,7 +52,7 @@ app.post('/register',(req,res)=>{
     })
 })
 
-app.post('transfer',(req,res)=>{
+app.post('/transfer',(req,res)=>{
     let ke=req.body.to
     let dari=req.body.from
     let nominal=req.body.nominal
