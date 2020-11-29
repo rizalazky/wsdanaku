@@ -33,7 +33,7 @@ app.post('/register',(req,res)=>{
     let alamat=req.body.alamat
     let saldo=req.body.saldo
     conn.query(`INSERT INTO tbl_user (no_telp,nama_user,jenis_kelamin,alamat,saldo) 
-    VALUES ('${no_telp}''${nama_user}''${jenis_kelamin}''${alamat}''${saldo}')`,(err,result)=>{
+    VALUES ('${no_telp}','${nama_user}','${jenis_kelamin}','${alamat}','${saldo}')`,(err,result)=>{
         
         if(err){
             res.json({
