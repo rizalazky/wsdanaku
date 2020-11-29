@@ -57,7 +57,7 @@ app.post('/transfer',(req,res)=>{
     let dari=req.body.from
     let nominal=req.body.nominal
 
-    let query=`CALL SP-TRANSFER ('${ke}','${dari}',${nominal})`
+    let query=`CALL 'SP-TRANSFER'('${ke}','${dari}',${nominal})`
 
     conn.query(query,(err,result)=>{
         if(err){
