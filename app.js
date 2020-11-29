@@ -28,7 +28,12 @@ app.post('/register',(req,res)=>{
 
     
     let no_telp=req.body.no_telp
-    conn.query(`INSERT INTO tbl_user (no_telp) VALUES ('${no_telp}')`,(err,result)=>{
+    let nama_user=req.body.nama_user
+    let jenis_kelamin=req.body.jenis_kelamin
+    let alamat=req.body.alamat
+    let saldo=req.body.saldo
+    conn.query(`INSERT INTO tbl_user (no_telp,nama_user,jenis_kelamin,alamat,saldo) 
+    VALUES ('${no_telp}''${nama_user}''${jenis_kelamin}''${alamat}''${saldo}')`,(err,result)=>{
         
         if(err){
             res.json({
@@ -43,7 +48,7 @@ app.post('/register',(req,res)=>{
                 message:'Berhasil Registrasi'
             })
         }
-        res.json(response)
+        
     })
 })
 
